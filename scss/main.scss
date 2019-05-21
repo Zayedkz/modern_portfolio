@@ -1,5 +1,6 @@
 @import 'config'; //import other scss files
 @import 'menu';
+@import 'mobile';
 
 * { // * means everything
     box-sizing: border-box; //turns evreything to a box so that when you change padding it doesnt mess with margins
