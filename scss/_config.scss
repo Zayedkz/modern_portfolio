@@ -1,0 +1,30 @@
+$primary-color: #444; // variables start with $
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opactiy: 0.9;
+
+@mixin easeOut { // basically a function
+    transition: all 0.5s ease-out; // "all" specifies what to transition (could just be "color"), 0.5s is the amount of time taken, ease-out is the motion
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after { //overlay to cover entire page, &:after is like an element in html, it is aalways accompained with content
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1; // this is to push overlay behind the headings/text
+                background: rgba($primary-color, $background-opactiy);
+            }
+        }
+    }
+}
