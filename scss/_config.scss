@@ -17,7 +17,7 @@ $background-opactiy: 0.9;
 
             &:after { //overlay to cover entire page, &:after is like an element in html, it is aalways accompained with content
                 content: '';
-                position: absolute;
+                position: absolute; // specify exactly where you want it to be
                 top: 0;
                 right: 0;
                 width: 100%;
