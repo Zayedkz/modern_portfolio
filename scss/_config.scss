@@ -29,6 +29,15 @@ $background-opactiy: 0.9;
     }
 }
 
+// set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
 // media query mixins
 @mixin mediaSm {
     @media screen and (max-width: 500px) { // any css we put inside here will only apply if screen is 500px or less which is like 25% of screen
